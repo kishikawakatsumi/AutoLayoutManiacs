@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +15,7 @@
             <objects>
                 <viewController id="QgN-eP-rnA" customClass="ViewController" customModule="AutoLayoutManiacs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eMO-2L-Xyp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-1R-7UD" userLabel="NavigationBar Backing">
@@ -22,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-UY-oZL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="974"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxm-PK-N5N" userLabel="Image View Container">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -31,48 +32,43 @@
                                             <constraint firstAttribute="width" secondItem="uxm-PK-N5N" secondAttribute="height" multiplier="375:250" id="Rlr-eP-5ZO"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-qe-KNn">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-qe-KNn" userLabel="Collapsable Text Container">
                                         <rect key="frame" x="20" y="270" width="335" height="200"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnD-g7-1JW">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnD-g7-1JW" userLabel="Collapse Container">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="3CZ-IU-GKn"/>
                                                     <constraint firstAttribute="height" constant="200" id="oNI-vB-RAu"/>
-                                                </constraints>
-                                            </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7q-ei-LdP" userLabel="Collapse Container">
-                                                <rect key="frame" x="0.0" y="200" width="335" height="170"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="170" id="rm7-k9-Bpd"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-Bq-lc0">
-                                        <rect key="frame" x="20" y="258" width="335" height="212"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-Vx-OF5">
+                                        <rect key="frame" x="20" y="270" width="335" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">日本国及びアメリカ合衆国は、両国の間に伝統的に存在する平和及び友好の関係を強化し、並びに民主主義の諸原則、個人の自由及び法の支配を擁護することを希望し、また、両国の間の一層緊密な経済的協力を促進し、並びにそれぞれの国における経済的安定及び福祉の条件を助長することを希望し、国際連合憲章の目的及び原則に対する信念並びにすべての国民及びすべての政府とともに平和のうちに生きようとする願望を再確認し、両国が国際連合憲章に定める個別的又は集団的自衛の固有の権利を有していることを確認し、両国が極東における国際の平和及び安全の維持に共通の関心を有することを考慮し、相互協力及び安全保障条約を締結することを決意し、よって、次のとおり協定する。</mutableString>
+                                                <mutableString key="content">日本国及びアメリカ合衆国は、両国の間に伝統的に存在する平和及び友好の関係を強化し、並びに民主主義の諸原則、個人の自由及び法の支配を擁護することを希望し、また、両国の間の一層緊密な経済的協力を促進し、並びにそれぞれの国における経済的安定及び福祉の条件を助長することを希望し、国際連合憲章の目的及び原則に対する信念並びにすべての国民及びすべての政府とともに平和のうちに生きようとする願望を再確認し、両国が国際連合憲章に定める個別的又は集団的自衛の固有の権利を有していることを確認し、両国が極東における国際の平和及び安全の維持に共通の関心を有することを考慮し、相互協力及び安全保障条約を締結することを決意し、よって、次のとおり協定する。締約国は、国際連合憲章に定めるところに従い、それぞれが関係することのある国際紛争を平和的手段によつて国際の平和及び安全並びに正義を危うくしないように解決し、並びにそれぞれの国際関係において、武力による威嚇又は武力の行使を、いかなる国の領土保全又は政治的独立に対するものも、また、国際連合の目的と両立しない他のいかなる方法によるものも慎むことを約束する。</mutableString>
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="16" name=".HiraKakuInterface-W3"/>
-                                                    <font key="NSOriginalFont" size="14" name=".HiraKakuInterface-W3"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfy-rn-J6Z">
-                                        <rect key="frame" x="20" y="490" width="335" height="29"/>
+                                        <rect key="frame" x="20" y="470" width="335" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="Read more..."/>
                                         <connections>
                                             <action selector="expandButtonTapped:" destination="QgN-eP-rnA" eventType="touchUpInside" id="fFc-du-FOf"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sYg-jO-Vwn">
-                                        <rect key="frame" x="20" y="559" width="335" height="266.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sYg-jO-Vwn" userLabel="Table Stack View">
+                                        <rect key="frame" x="20" y="539" width="335" height="266.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-ZJ-beh" userLabel="Tite Row">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
@@ -343,7 +339,7 @@
                                         </constraints>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-w5-bsA" userLabel="Random Choice">
-                                        <rect key="frame" x="20" y="885.5" width="335" height="29"/>
+                                        <rect key="frame" x="20" y="865.5" width="335" height="29"/>
                                         <segments>
                                             <segment title="1"/>
                                             <segment title="2"/>
@@ -360,31 +356,31 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="pfy-rn-J6Z" secondAttribute="trailing" constant="20" id="2DR-MN-ba3"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Co-qe-KNn" secondAttribute="trailing" constant="20" id="6QM-6W-ar9"/>
+                                    <constraint firstItem="pfy-rn-J6Z" firstAttribute="top" secondItem="LT6-Vx-OF5" secondAttribute="bottom" id="2ZP-nj-Jzx"/>
+                                    <constraint firstItem="sYg-jO-Vwn" firstAttribute="leading" secondItem="Cu0-pH-N4K" secondAttribute="leading" constant="20" id="CIW-jg-HtY"/>
+                                    <constraint firstItem="0Co-qe-KNn" firstAttribute="top" secondItem="LT6-Vx-OF5" secondAttribute="top" id="Cvl-mN-wlY"/>
+                                    <constraint firstItem="0Co-qe-KNn" firstAttribute="leading" secondItem="LT6-Vx-OF5" secondAttribute="leading" id="Dtz-rD-7Jb"/>
                                     <constraint firstItem="uxm-PK-N5N" firstAttribute="top" secondItem="2a3-UY-oZL" secondAttribute="top" id="ERa-X8-3x9"/>
+                                    <constraint firstItem="LT6-Vx-OF5" firstAttribute="top" secondItem="uxm-PK-N5N" secondAttribute="bottom" constant="20" id="GuU-Sy-yJN"/>
+                                    <constraint firstItem="0Co-qe-KNn" firstAttribute="height" secondItem="LT6-Vx-OF5" secondAttribute="height" id="J5w-HG-wgz"/>
+                                    <constraint firstItem="sYg-jO-Vwn" firstAttribute="trailing" secondItem="Cu0-pH-N4K" secondAttribute="trailing" constant="-20" id="JSX-at-sHb"/>
                                     <constraint firstItem="fFc-w5-bsA" firstAttribute="top" secondItem="sYg-jO-Vwn" secondAttribute="bottom" constant="60" id="KPY-W7-4fF"/>
                                     <constraint firstItem="uxm-PK-N5N" firstAttribute="leading" secondItem="2a3-UY-oZL" secondAttribute="leading" id="NZT-j1-kB9"/>
-                                    <constraint firstAttribute="trailing" secondItem="fFc-w5-bsA" secondAttribute="trailing" constant="20" id="Prf-dj-I8r"/>
+                                    <constraint firstItem="fFc-w5-bsA" firstAttribute="leading" secondItem="Cu0-pH-N4K" secondAttribute="leading" constant="20" id="Qng-wK-fC7"/>
                                     <constraint firstItem="bsg-Y0-WQa" firstAttribute="trailing" secondItem="uxm-PK-N5N" secondAttribute="trailing" id="SdD-Eb-eXY"/>
                                     <constraint firstItem="bsg-Y0-WQa" firstAttribute="height" relation="greaterThanOrEqual" secondItem="uxm-PK-N5N" secondAttribute="height" id="Wm0-0x-c2a"/>
-                                    <constraint firstAttribute="trailing" secondItem="LcS-Bq-lc0" secondAttribute="trailing" constant="20" id="Yyy-km-094"/>
                                     <constraint firstItem="pfy-rn-J6Z" firstAttribute="leading" secondItem="2a3-UY-oZL" secondAttribute="leading" constant="20" id="afy-zm-Pch"/>
                                     <constraint firstItem="sYg-jO-Vwn" firstAttribute="top" secondItem="pfy-rn-J6Z" secondAttribute="bottom" constant="40" id="cMO-Bk-g03"/>
-                                    <constraint firstItem="pfy-rn-J6Z" firstAttribute="top" secondItem="0Co-qe-KNn" secondAttribute="bottom" constant="20" id="eJn-ac-Oyr"/>
-                                    <constraint firstItem="pfy-rn-J6Z" firstAttribute="top" secondItem="0Co-qe-KNn" secondAttribute="bottom" constant="20" id="f5w-dn-tup"/>
-                                    <constraint firstItem="LcS-Bq-lc0" firstAttribute="top" secondItem="uxm-PK-N5N" secondAttribute="bottom" constant="8" id="gvY-ja-cvG"/>
-                                    <constraint firstAttribute="trailing" secondItem="sYg-jO-Vwn" secondAttribute="trailing" constant="20" id="hee-Vs-5NM"/>
-                                    <constraint firstItem="0Co-qe-KNn" firstAttribute="top" secondItem="uxm-PK-N5N" secondAttribute="bottom" constant="20" id="iQh-p4-cVc"/>
-                                    <constraint firstItem="fFc-w5-bsA" firstAttribute="leading" secondItem="2a3-UY-oZL" secondAttribute="leading" constant="20" id="jQ6-nV-RIL"/>
-                                    <constraint firstItem="LcS-Bq-lc0" firstAttribute="bottom" secondItem="0Co-qe-KNn" secondAttribute="bottom" id="jiI-dk-CcN"/>
-                                    <constraint firstItem="sYg-jO-Vwn" firstAttribute="leading" secondItem="2a3-UY-oZL" secondAttribute="leading" constant="20" id="lv1-e7-2Oc"/>
-                                    <constraint firstItem="0Co-qe-KNn" firstAttribute="leading" secondItem="2a3-UY-oZL" secondAttribute="leading" constant="20" id="neu-cr-XUk"/>
+                                    <constraint firstItem="LT6-Vx-OF5" firstAttribute="trailing" secondItem="Cu0-pH-N4K" secondAttribute="trailing" constant="-20" id="iQc-D3-ZCA"/>
                                     <constraint firstAttribute="trailing" secondItem="uxm-PK-N5N" secondAttribute="trailing" id="p2Y-VY-cB7"/>
-                                    <constraint firstItem="LcS-Bq-lc0" firstAttribute="leading" secondItem="2a3-UY-oZL" secondAttribute="leading" constant="20" id="qys-Yi-idy"/>
+                                    <constraint firstItem="fFc-w5-bsA" firstAttribute="trailing" secondItem="Cu0-pH-N4K" secondAttribute="trailing" constant="-20" id="sYB-GJ-Qbu"/>
                                     <constraint firstItem="bsg-Y0-WQa" firstAttribute="bottom" secondItem="uxm-PK-N5N" secondAttribute="bottom" priority="750" id="ute-Iq-X8w"/>
+                                    <constraint firstItem="0Co-qe-KNn" firstAttribute="trailing" secondItem="LT6-Vx-OF5" secondAttribute="trailing" id="v3s-Qz-ZPd"/>
                                     <constraint firstAttribute="bottom" secondItem="fFc-w5-bsA" secondAttribute="bottom" constant="60" id="v7f-yh-Y5m"/>
                                     <constraint firstItem="bsg-Y0-WQa" firstAttribute="leading" secondItem="uxm-PK-N5N" secondAttribute="leading" id="xgk-kq-grK"/>
+                                    <constraint firstItem="LT6-Vx-OF5" firstAttribute="leading" secondItem="Cu0-pH-N4K" secondAttribute="leading" constant="20" id="zVj-Qc-6MV"/>
                                 </constraints>
+                                <viewLayoutGuide key="safeArea" id="Cu0-pH-N4K"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -406,10 +402,12 @@
                         <viewLayoutGuide key="safeArea" id="tSA-Zc-fNR"/>
                     </view>
                     <navigationItem key="navigationItem" id="BuN-Yd-HHi"/>
+                    <size key="freeformSize" width="375" height="974"/>
                     <connections>
+                        <outlet property="collapseContainer" destination="hnD-g7-1JW" id="amj-vD-2km"/>
                         <outlet property="expandButton" destination="pfy-rn-J6Z" id="FHU-2X-A2t"/>
-                        <outlet property="expandContainer" destination="hnD-g7-1JW" id="amj-vD-2km"/>
                         <outlet property="scrollView" destination="2a3-UY-oZL" id="Ry8-rC-Zkb"/>
+                        <outlet property="textView" destination="LT6-Vx-OF5" id="nYc-uD-1ho"/>
                         <outletCollection property="quantityLabels" destination="iod-bs-Ugn" collectionClass="NSMutableArray" id="3ju-kU-ioc"/>
                         <outletCollection property="quantityLabels" destination="m8y-07-KX5" collectionClass="NSMutableArray" id="zyf-VN-MBi"/>
                         <outletCollection property="quantityLabels" destination="1U4-4g-IYg" collectionClass="NSMutableArray" id="2Zg-8R-vjQ"/>
@@ -424,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tze-QK-jXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818" y="664"/>
+            <point key="canvasLocation" x="1822" y="664"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tap-I5-g4N">

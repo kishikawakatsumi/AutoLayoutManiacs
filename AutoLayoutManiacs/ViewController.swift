@@ -4,7 +4,8 @@ class ViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     @IBOutlet var scrollView: UIScrollView!
 
-    @IBOutlet var expandContainer: UIView!
+    @IBOutlet var textView: UITextView!
+    @IBOutlet var collapseContainer: UIView!
     @IBOutlet var expandButton: UIButton!
 
     @IBOutlet var quantityLabels: [UILabel]!
@@ -25,6 +26,9 @@ class ViewController: UIViewController {
         navigationItem.title = "Auto Layout Maniacs"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
 
+        textView.textContainerInset = .zero
+        textView.textContainer.lineFragmentPadding = 0
+
         zip(quantityLabels, priceLabels).forEach {
             $0.0.font = UIFont.monospacedDigitSystemFont(ofSize: 15, weight: .regular)
             $0.1.font = UIFont.monospacedDigitSystemFont(ofSize: 15, weight: .regular)
@@ -42,8 +46,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func expandButtonTapped(_ sender: Any) {
-        expandContainer.isHidden = !expandContainer.isHidden
-        expandButton.setTitle(expandContainer.isHidden ? "Collapse" : "Read more...", for: .normal)
+        collapseContainer.isHidden = !collapseContainer.isHidden
+        expandButton.setTitle(collapseContainer.isHidden ? "Collapse" : "Read more...", for: .normal)
 
         scrollView.setNeedsLayout()
         UIView.animate(withDuration: 0.3) {
