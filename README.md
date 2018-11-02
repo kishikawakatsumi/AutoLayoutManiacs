@@ -1,6 +1,6 @@
 # AutoLayoutManiacs
 
-### Strech & Sticky Header
+### Stretch & Sticky Header
 ![oct-17-2018 21-11-45](https://user-images.githubusercontent.com/40610/47085331-48c73980-d251-11e8-8ffd-25c6c75b6044.gif)
 
 ### Expand & Collapse Long Text
