@@ -46,13 +46,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func expandButtonTapped(_ sender: Any) {
-        collapseContainer.isHidden = !collapseContainer.isHidden
-        expandButton.setTitle(collapseContainer.isHidden ? "Collapse" : "Read more...", for: .normal)
+        collapseContainer.isHidden.toggle()
 
-        scrollView.setNeedsLayout()
-        UIView.animate(withDuration: 0.3) {
-            self.scrollView.layoutIfNeeded()
+        UIView.performWithoutAnimation {
+            self.expandButton.setTitle(collapseContainer.isHidden ? "Collapse" : "Read more...", for: .normal)
+            self.expandButton.layoutIfNeeded()
         }
+
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: {
+            self.textView.superview?.layoutIfNeeded()
+        })
     }
 
     @IBAction func segmemtedControlValueChanged(_ sender: UISegmentedControl) {

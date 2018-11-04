@@ -38,8 +38,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnD-g7-1JW" userLabel="Collapse Container">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="3CZ-IU-GKn"/>
-                                                    <constraint firstAttribute="height" constant="200" id="oNI-vB-RAu"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="oNI-vB-RAu"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -49,7 +48,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">日本国及びアメリカ合衆国は、両国の間に伝統的に存在する平和及び友好の関係を強化し、並びに民主主義の諸原則、個人の自由及び法の支配を擁護することを希望し、また、両国の間の一層緊密な経済的協力を促進し、並びにそれぞれの国における経済的安定及び福祉の条件を助長することを希望し、国際連合憲章の目的及び原則に対する信念並びにすべての国民及びすべての政府とともに平和のうちに生きようとする願望を再確認し、両国が国際連合憲章に定める個別的又は集団的自衛の固有の権利を有していることを確認し、両国が極東における国際の平和及び安全の維持に共通の関心を有することを考慮し、相互協力及び安全保障条約を締結することを決意し、よって、次のとおり協定する。締約国は、国際連合憲章に定めるところに従い、それぞれが関係することのある国際紛争を平和的手段によつて国際の平和及び安全並びに正義を危うくしないように解決し、並びにそれぞれの国際関係において、武力による威嚇又は武力の行使を、いかなる国の領土保全又は政治的独立に対するものも、また、国際連合の目的と両立しない他のいかなる方法によるものも慎むことを約束する。</mutableString>
+                                                <string key="content">日本国及びアメリカ合衆国は、両国の間に伝統的に存在する平和及び友好の関係を強化し、並びに民主主義の諸原則、個人の自由及び法の支配を擁護することを希望し、また、両国の間の一層緊密な経済的協力を促進し、並びにそれぞれの国における経済的安定及び福祉の条件を助長することを希望し、国際連合憲章の目的及び原則に対する信念並びにすべての国民及びすべての政府とともに平和のうちに生きようとする願望を再確認し、両国が国際連合憲章に定める個別的又は集団的自衛の固有の権利を有していることを確認し、両国が極東における国際の平和及び安全の維持に共通の関心を有することを考慮し、相互協力及び安全保障条約を締結することを決意し、よって、次のとおり協定する。締約国は、国際連合憲章に定めるところに従い、それぞれが関係することのある国際紛争を平和的手段によつて国際の平和及び安全並びに正義を危うくしないように解決し、並びにそれぞれの国際関係において、武力による威嚇又は武力の行使を、いかなる国の領土保全又は政治的独立に対するものも、また、国際連合の目的と両立しない他のいかなる方法によるものも慎むことを約束する。</string>
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="16" name=".HiraKakuInterface-W3"/>
